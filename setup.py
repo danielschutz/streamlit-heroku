@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='streamlit_heroku',
     version='0.0.1',
-    packages=['streamlit_heroku'],
+    packages=['src/streamlit_heroku'],
     url='',
     license='MIT',
     author='Daniel Schutz',
