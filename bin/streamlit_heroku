@@ -1,1 +1,2 @@
-#!/usr/bin/env python streamlit_heroku
+#!/usr/bin/env python 
+import streamlit_heroku
