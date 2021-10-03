@@ -124,8 +124,8 @@ def make_app_py(app_name: str) -> None:
         app.writelines(txt)
 
 
-if __name__ == "__main__":
-    if sys.argv[1] == "create":
+def main():
+        if sys.argv[1] == "create":
         if len(sys.argv) >= 3:
             app_name = sys.argv[2]
         else:
@@ -147,3 +147,4 @@ if __name__ == "__main__":
                 print("no requirements.txt found")
             else:
                 update_requirements()
+                
