@@ -125,7 +125,7 @@ def make_app_py(app_name: str) -> None:
 
 
 def main():
-        if sys.argv[1] == "create":
+    if sys.argv[1] == "create":
         if len(sys.argv) >= 3:
             app_name = sys.argv[2]
         else:
