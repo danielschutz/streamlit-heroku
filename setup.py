@@ -9,5 +9,5 @@ setup(
     author='Daniel Schutz',
     author_email='danieljschutz@gmail.com',
     description='Tool to help create files needed to deploy Streamlit App on Heroku',
-    scripts=['src/streamlit_heroku/streamlit_heroku.py']
+    scripts=['bin/streamlit_heroku']
 )
