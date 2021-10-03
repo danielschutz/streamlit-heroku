@@ -147,6 +147,3 @@ def main():
                 print("no requirements.txt found")
             else:
                 update_requirements()
-
-if __name__ == '__main__':
-    main()
