@@ -11,9 +11,9 @@ setuptools.setup(
     description='Tool to help create files needed to deploy Streamlit App on Heroku',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/danielschutz/streamlit_heroku",
     project_urls={
-        "Bug Tracker": "",
+        "Bug Tracker": "https://github.com/danielschutz/streamlit_heroku/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
