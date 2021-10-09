@@ -3,16 +3,6 @@ import sys
 import os
 
 
-def make_venv(app_name: str) -> None:
-    """
-    creates a new virtual environment in project folder
-
-    :param app_name: str name of heroku application
-    :return: None
-    """
-    subprocess.call(["python", "-m", "venv", f"./{app_name}/venv"])
-
-
 def make_app_folder(app_name: str) -> None:
     """
     creates project folder system
@@ -66,32 +56,6 @@ def make_requirements(app_name: str) -> None:
         requirements.writelines("")
 
 
-def make_ignore(app_name: str) -> None:
-    """
-    creates or appends .gitignore to include vevn
-
-    :param app_name: str name of heroku application
-    :return: None
-    """
-    with open(f"{app_name}/.gitignore", "w") as ignore:
-        ignore.writelines("venv")
-
-
-def update_requirements() -> None:
-    """
-    Updates requirements.txt
-
-    Use command 'streamlit_heroku update-requiremnts'
-    after dependencies are added
-
-    :param app_name: str name of heroku application
-    :return: None
-    """
-    raw_txt = subprocess.check_output(["pip", "freeze"]).decode("utf-8")
-    with open("requirements.txt", "w") as requirements:
-        requirements.writelines(raw_txt)
-
-
 def make_setup_sh(app_name: str) -> None:
     """
     Creates setup.sh
@@ -125,25 +89,17 @@ def make_app_py(app_name: str) -> None:
 
 
 def main():
-    if sys.argv[1] == "create":
-        if len(sys.argv) >= 3:
-            app_name = sys.argv[2]
-        else:
-            app_name = input("Enter App Name")
+    if len(sys.argv) == 2:
+        app_name = sys.argv[1]
         make_app_folder(app_name)
-        make_venv(app_name)
         make_procfile(app_name)
         make_runtime(app_name)
         make_requirements(app_name)
         make_setup_sh(app_name)
         make_app_py(app_name)
-        make_ignore(app_name)
+    else:
+        print("No app name entered")
 
-    elif sys.argv[1] == "update-requirements":
-        if sys.prefix == sys.base_prefix:
-            print("Not in virtual environment")
-        else:
-            if "requirements.txt" not in os.listdir():
-                print("no requirements.txt found")
-            else:
-                update_requirements()
+
+if __name__ == "__main__":
+    main()
