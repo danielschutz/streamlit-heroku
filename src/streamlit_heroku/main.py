@@ -99,7 +99,3 @@ def main():
         make_app_py(app_name)
     else:
         print("No app name entered")
-
-
-if __name__ == "__main__":
-    main()
