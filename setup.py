@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="streamlit_heroku",
-    version="0.0.3",
+    version="0.0.1",
     author="Daniel Schutz",
     author_email="danieljschutz@gmail.com",
     description="Tool to help create files needed to deploy Streamlit App on Heroku",
