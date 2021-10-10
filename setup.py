@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="streamlit_heroku",
+    name="streamlit-heroku",
     version="0.0.1",
     author="Daniel Schutz",
     author_email="danieljschutz@gmail.com",
