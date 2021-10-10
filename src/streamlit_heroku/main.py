@@ -35,7 +35,7 @@ def make_runtime() -> None:
     python-3.7.12
     python-3.6.15
     """
-    version_text = f"python-3.9.7"
+    version_text = "python-3.9.7"
     with open("runtime.txt", "w") as runtime:
         runtime.writelines(version_text)
 
@@ -78,7 +78,7 @@ def make_app_py(app_name: str) -> None:
 
 
 def main():
-    app_name = os.getcwd().split('/')[-1]
+    app_name = os.getcwd().split("/")[-1]
     make_app_folder(app_name)
     make_procfile(app_name)
     make_runtime()
