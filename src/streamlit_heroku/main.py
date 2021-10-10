@@ -29,7 +29,7 @@ def make_runtime() -> None:
     Assumes Heroku default version 3.9.7.
 
     Heroku Supported runtimes:
-    python-3.10.1
+    python-3.10.0
     python-3.9.7
     python-3.8.12
     python-3.7.12
