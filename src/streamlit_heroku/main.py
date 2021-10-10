@@ -81,7 +81,7 @@ def main():
     app_name = os.getcwd().split('/')[-1]
     make_app_folder(app_name)
     make_procfile(app_name)
-    make_runtime(app_name)
-    make_requirements(app_name)
-    make_setup_sh(app_name)
+    make_runtime()
+    make_requirements()
+    make_setup_sh()
     make_app_py(app_name)
